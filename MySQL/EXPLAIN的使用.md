@@ -146,3 +146,6 @@ The rows column indicates the number of rows MySQL believes it must examine to e
 这个 rows 就是 mysql 认为必须要逐行去检查和判断的记录的条数。举个例子来说，假如有一个语句 select * from t where column_a = 1 and column_b = 2; 全表假设有 100 条记录，column_a 字段有索引（非联合索引），column_b没有索引。column_a = 1 的记录有 20 条， column_a = 1 and column_b = 2 的记录有 5 条。
 
 那么最终查询结果应该显示 5 条记录。explain 结果中的 rows 应该是 20。因为这 20 条记录 mysql 引擎必须逐行检查是否满足 where 条件。
+
+转载自：
+https://mp.weixin.qq.com/s?__biz=MzU0OTE4MzYzMw==&mid=2247486830&idx=6&sn=db6d94faee0d20800eaddb0ebd81d36d&chksm=fbb28490ccc50d86491c0e15017d8326f3bf6ebb2f34e4413dafa90cb24db7828a17736d4514&scene=0&xtrack=1&key=f9a94282848b718ad445f048c4f9af9bd0fddafee505614d1f67a984bf091d04811f1247ea956951fc844e2d7f5b0eb4ae9cab7735d9e362528d3f199b2af2f504657f3254555f2859fa2b352b5d152a&ascene=1&uin=MTY0NjE5OTEwMA%3D%3D&devicetype=Windows+10&version=62060833&lang=zh_CN&pass_ticket=hmqWPKTiI0%2Fav5XaUHTbFnvq29sMT275J582KxbG7ZspQSZcGR8CmaozvBEj5ewl
